@@ -11,6 +11,8 @@ var tumblersRouter = require('./routes/tumblers');
 
 var app = express();
 
+require('./config/database');
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
