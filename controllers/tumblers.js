@@ -1,9 +1,9 @@
-const Tumbler = require('../models/tumbler');
+// const Tumbler = require('../models/tumbler');
 
-module.exports = {
-    index,
-}
+// module.exports = {
+//     index,
+// }
 
-function index(req, res, next) {
-    
-}
+// function index(req, res, next) {
+//     res.render('/index');
+// }
