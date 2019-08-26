@@ -1,1 +1,56 @@
 <!--This is the new entry form page-->
+
+<%- include('../partials/header') %>
+
+<form id="new-entry" action="/new-entry" method="POST">
+    <label>Name: </label>
+        <input type="text" name="name">
+    <label>Age: </label>
+        <input type="number" name="age">
+    <label>Profession: </label>
+        <input type="text" name="profession">
+    <label>Zodiac Sign: </label>
+        <select name="zodiac">
+            <option value="Aquarius">Aquarius</option>
+            <option value="Pisces">Pisces</option>
+            <option value="Aries">Aries</option>
+            <option value="Taurus">Taurus</option>
+            <option value="Gemini">Gemini</option>
+            <option value="Cancer">Cancer</option>
+            <option value="Leo">Leo</option>
+            <option value="Virgo">Virgo</option>
+            <option value="Libra">Libra</option>
+            <option value="Scorpio">Scorpio</option>
+            <option value="Sagittarius">Sagittarius</option>
+            <option value="Capricorn">Capricorn</option>
+
+    <label>Rating:</label>
+        <select name="rating">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+
+    <input type="submit" value="Add Review"></input>
+
+
+
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%- include('../partials/footer') %>

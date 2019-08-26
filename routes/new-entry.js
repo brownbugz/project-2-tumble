@@ -1,8 +1,8 @@
 var express = require('express');
 var router = express.Router();
-var userPageController = require('../controllers/users-homepage');
+var newEntryController = require('../controllers/new-entry');
 
 /* GET logged in home page. */
-router.get('/', userPageController.userPage);
+router.get('/', newEntryController.newEntry);
 
 module.exports = router;

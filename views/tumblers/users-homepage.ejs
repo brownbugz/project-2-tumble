@@ -1,20 +1,24 @@
 <!--This is the home page while logged in-->
+<%- include('../partials/header') %>
 
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Tumble Home</title>
+    <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <nav>
-      <h3><%= title %></h3>
-      <a href="/logout">Log Out</a>
-    </nav>
 
-    <input id="name"></input>
-    <input id="age"></input>
-    
+    <div>
+      <nav>
+        <h2 class="title"><%= title %></h2>
+        <a class="logout" href="/logout"><h2>Log Out</h2></a>
+      </nav>
+    </div>
 
-  </body>
-</html>
+    <button type="submit" value="New Entry">New Entry</button>
+
+    <button type="submit" value="Past Entry">Past Entry</button>
+
+
+    <%- include('../partials/footer') %>
