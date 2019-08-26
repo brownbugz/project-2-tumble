@@ -7,10 +7,19 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1>Tumble</h1>
-    <p>Welcome to <%= title %></p>
-    <input type="submit" id="username"></input>
-    <input type="submit" id="password"></input>
+
+      <h1><%= title %></h1>
+      <h3>to date or not to date</h3>
+
+    <ul class="right">
+      <li>
+      <% if (user) { %>
+        <a href="/logout">Log Out</a>
+      <% } else { %>
+        <a href="/auth/google">Login with Google</a>
+      <% } %>
+      </li>
+    </ul>
 
   </body>
 </html>
