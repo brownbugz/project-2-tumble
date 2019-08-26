@@ -1,9 +1,8 @@
-// var express = require('express');
-// var router = express.Router();
+var express = require('express');
+var router = express.Router();
+var userPageController = require('../controllers/users-homepage');
 
-// /* GET users logged in home page. */
-// router.get('/', function(req, res, next) {
-//   res.render('users-homepage', { title: 'Tumble' });
-// });
+/* GET logged in home page. */
+router.get('/users-homepage', userPageController.users-homepage);
 
-// module.exports = router;
+module.exports = router;
