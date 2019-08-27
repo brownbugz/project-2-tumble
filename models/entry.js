@@ -19,18 +19,14 @@ var entrySchema = new Schema({
     required: true
   },
   age: {
-    type: Number,
-    min: 18,
-    max: 90,
+    type: String,
     required: true
   }, 
   profession: {
       type: String,
-      required: true
   },
   zodiac: {
       type: String,
-      required: true
   },
   reviews: [reviewSchema],
   repeatDate: {type: Boolean, default: false}

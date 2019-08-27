@@ -10,11 +10,16 @@ function newEntry(req, res) {
 }
 
 function createEntry(req,res) {
+    
     var entry = new Entry(req.body);
-    entry.save(function(err) {
-    if (err) return res.redirect('tumblers/past-entry');
     console.log(entry);
-    res.redirect(`tumblers/past-entry/${entry._id}`);
+    entry.save(function(err) {
+    if (err) {
+        console.log(err);
+        return res.redirect('/users-homepage');
+    }
+    console.log(entry);
+    res.redirect(`/users-homepage`);
     });
 }
 
