@@ -8,7 +8,8 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-
+    
+    
     <div>
       <nav>
         <h2 class="title"><%= title %></h2>
@@ -16,9 +17,15 @@
       </nav>
     </div>
 
+    <br>
+    <br>
+
+  <form action="/new-entry">
     <button type="submit" value="New Entry">New Entry</button>
-
+  </form>
+  <br>
+  <form action="/past-entry">
     <button type="submit" value="Past Entry">Past Entry</button>
-
+  </form>
 
     <%- include('../partials/footer') %>

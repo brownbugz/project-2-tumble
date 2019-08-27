@@ -1,5 +1,4 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: black;
   color: white;
@@ -56,4 +55,18 @@ nav {
 button {
   margin: 5px;
   border: 5px solid white;
+}
+
+#new-entry, #review {
+  display: flex;
+  flex-direction: column;
+}
+
+.rating {
+  width: 100%;
+}
+
+textarea {
+  resize: horizontal vertical;
+  overflow: auto;
 }

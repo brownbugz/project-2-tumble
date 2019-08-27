@@ -1,16 +1,25 @@
 <!--This is the new entry form page-->
 
 <%- include('../partials/header') %>
+<div>
+    <nav>
+        <h2 class="title"><%= title %></h2>
+        <a class="logout" href="/logout"><h2>Log Out</h2></a>
+    </nav>
+</div>
 
 <form id="new-entry" action="/new-entry" method="POST">
     <label>Name: </label>
-        <input type="text" name="name">
+        <input class="name" type="text" name="name">
+        <br>
     <label>Age: </label>
-        <input type="number" name="age">
+        <input class="age" type="number" name="age">
+        <br>
     <label>Profession: </label>
-        <input type="text" name="profession">
+        <input class="profession" type="text" name="profession">
+        <br>
     <label>Zodiac Sign: </label>
-        <select name="zodiac">
+        <select class="zodiac" name="zodiac">
             <option value="Aquarius">Aquarius</option>
             <option value="Pisces">Pisces</option>
             <option value="Aries">Aries</option>
@@ -23,20 +32,29 @@
             <option value="Scorpio">Scorpio</option>
             <option value="Sagittarius">Sagittarius</option>
             <option value="Capricorn">Capricorn</option>
-
-    <label>Rating:</label>
-        <select name="rating">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
         </select>
-
-    <input type="submit" value="Add Review"></input>
-
-
-
+    <br>
+    <br>
+    <label>Review: </label>
+    <textarea class="review" name="content">
+    </textarea> 
+    <br>
+    <br>
+    <label>Rating:</label>
+    <select class="rating" name="rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+    <br>
+    <br>
+    <label>Date Again?: </label>
+    <input type="checkbox" name="repeatDate" checked>
+    <br>
+    <br>
+    <input type="submit" value="Add Review" action="users-homepage"></input>
 
 </form>
 

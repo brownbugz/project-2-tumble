@@ -20,20 +20,21 @@ var entrySchema = new Schema({
   },
   age: {
     type: Number,
+    min: 18,
+    max: 90,
+    required: true
   }, 
   profession: {
-      type: String
+      type: String,
+      required: true
   },
   zodiac: {
-      type: String
+      type: String,
+      required: true
   },
   reviews: [reviewSchema],
-  }, 
-  repeat: {
-      type: Boolean,
-      default: false
-  }, {
-    timestamps: true
-});
+  repeatDate: {type: Boolean, default: false}
+}, {timestamps: true});
+
 
 module.exports = mongoose.model('Entry', entrySchema);

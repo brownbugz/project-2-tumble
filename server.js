@@ -15,6 +15,8 @@ require('./config/passport');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var usersHomePageRouter = require('./routes/users-homepage');
+var newEntryRouter = require('./routes/new-entry');
+var pastEntryRouter = require('./routes/past-entry');
 
 
 var app = express();
@@ -42,6 +44,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/users-homepage', usersHomePageRouter);
+app.use('/new-entry', newEntryRouter);
+app.use('/past-entry', pastEntryRouter);
 
 
 

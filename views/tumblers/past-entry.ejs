@@ -2,19 +2,31 @@
 
 <%- include('../partials/header') %>
 
+<div>
+    <nav>
+        <h2 class="title"><%= title %></h2>
+        <a class="logout" href="/logout"><h2>Log Out</h2></a>
+    </nav>
+</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
+<table id="list">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Profession</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% entries.forEach(function(e) { %>
+            <tr>
+              <td><%= e.name %></td>
+              <td><%= e.age %></td>
+              <td><a href="//<%= e._id %>">DETAILS</a></td>
+            </tr>
+        <% }); %>
+    </tbody>
+</table>
 
 
 <%- include('../partials/footer') %>
