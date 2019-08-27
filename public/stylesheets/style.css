@@ -57,16 +57,12 @@ button {
   border: 5px solid white;
 }
 
-#new-entry, #review {
-  display: flex;
-  flex-direction: column;
-}
-
 .rating {
-  width: 100%;
+  width: 20%;
 }
 
 textarea {
   resize: horizontal vertical;
   overflow: auto;
 }
+

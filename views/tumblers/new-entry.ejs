@@ -9,10 +9,10 @@
 </div>
 
 <form id="new-entry" action="/new-entry" method="POST">
-    <label>Name: </label>
+    <label class="name">Name: </label>
         <input class="name" type="text" name="name">
         <br>
-    <label>Age Range: </label>
+    <label class="age">Age Range: </label>
         <select class="age" name="age">
             <option value="18-25">18-25</option>
             <option value="26-35">26-35</option>
@@ -24,10 +24,10 @@
             <option value="86-99">86-99</option>
         </select>
         <br>
-    <label>Profession: </label>
+    <label class="profession">Profession: </label>
         <input class="profession" type="text" name="profession">
         <br>
-    <label>Zodiac Sign: </label>
+    <label class="zodiac">Zodiac Sign: </label>
         <select class="zodiac" name="zodiac">
             <option value="Aquarius">Aquarius</option>
             <option value="Pisces">Pisces</option>
@@ -44,12 +44,12 @@
         </select>
     <br>
     <br>
-    <label>Review: </label>
+    <label class="review">Review: </label>
     <textarea class="review" action="/reviews" name="content">
     </textarea> 
     <br>
     <br>
-    <label>Rating:</label>
+    <label class="rating">Rating:</label>
     <select class="rating" name="rating">
         <option value="1">1</option>
         <option value="2">2</option>
@@ -59,11 +59,11 @@
     </select>
     <br>
     <br>
-    <label>Date Again?: </label>
-    <input type="checkbox" name="repeatDate" value="true" checked>
+    <label class="repeatDate">Date Again?: </label>
+    <input class="repeatDate" type="checkbox" name="repeatDate" value="true" checked>
     <br>
     <br>
-    <input type="submit" value="Add Review" action="users-homepage"></input>
+    <input type="submit" value="Add Entry" action="users-homepage"></input>
 
 </form>
 
