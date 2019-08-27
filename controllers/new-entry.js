@@ -3,6 +3,7 @@ var Entry = require('../models/entry');
 module.exports = {
     newEntry,
     createEntry,
+    // deleteEntry
 }
 
 function newEntry(req, res) {
@@ -10,7 +11,6 @@ function newEntry(req, res) {
 }
 
 function createEntry(req,res) {
-    
     var entry = new Entry(req.body);
     console.log(entry);
     entry.save(function(err) {
@@ -22,5 +22,14 @@ function createEntry(req,res) {
     res.redirect(`/users-homepage`);
     });
 }
+
+// function deleteEntry(req, res, next) {
+//     Entry.findOne({'entry._id': req.params.id}, function(err, entry) {
+//       entry.id(req.params.id).remove();
+//       entry.save(function(err) {
+//         res.redirect('/users-homepage');
+//       });
+//     });
+//   }
 
 

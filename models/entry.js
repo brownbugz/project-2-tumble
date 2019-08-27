@@ -28,7 +28,6 @@ var entrySchema = new Schema({
   zodiac: {
       type: String,
   },
-  reviews: [reviewSchema],
   repeatDate: {type: Boolean, default: false}
 }, {timestamps: true});
 

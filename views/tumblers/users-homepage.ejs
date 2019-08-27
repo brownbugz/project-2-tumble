@@ -5,7 +5,7 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
   </head>
   <body>
     
@@ -24,11 +24,8 @@
     <button type="submit" value="New Entry">New Entry</button>
   </form>
   <br>
-  <form action="">
     
-  </form>
-
-  <table id="list">
+<!--  <table id="list">
       <thead>
           <tr>
               <th>Name</th>
@@ -37,14 +34,18 @@
           </tr>
       </thead>
       <tbody>
-          <% entry.forEach(function(e) { %>
+          <% newEntry.forEach(function(entry) { %>
               <tr>
                 <td><%= entry.name %></td>
                 <td><%= entry.age %></td>
                 <td><a href="//<%= entry._id %>">List of Dates</a></td>
+                <% if (new-entry._id.equals(entry._id)) { %>
+                  <form action="/new-entry/<%= entry._id %>?_method=DELETE" method="POST" class="secondary-content">
+                    <button type="submit" class="btn-small red-text">X</button>
+                  </form>
               </tr>
           <% }); %>
       </tbody>
-  </table>
+  </table> -->
 
     <%- include('../partials/footer') %>
