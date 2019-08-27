@@ -3,7 +3,6 @@ var Entry = require('../models/entry');
 module.exports = {
     newEntry,
     createEntry,
-    // appendPastEntry
 }
 
 function newEntry(req, res) {
@@ -19,10 +18,4 @@ function createEntry(req,res) {
     });
 }
 
-// function appendPastEntry(req, res, next) {
-//     req.entry.push(req.body);
-//     req.entry.save(function(err) {
-//         res.redirect('/past-entry');
-//     });
-// }
 

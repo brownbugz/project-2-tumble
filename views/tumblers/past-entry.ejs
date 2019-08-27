@@ -18,11 +18,11 @@
         </tr>
     </thead>
     <tbody>
-        <% entries.forEach(function(e) { %>
+        <% entry.forEach(function(e) { %>
             <tr>
-              <td><%= e.name %></td>
-              <td><%= e.age %></td>
-              <td><a href="//<%= e._id %>">DETAILS</a></td>
+              <td><%= entry.name %></td>
+              <td><%= entry.age %></td>
+              <td><a href="//<%= entry._id %>">DETAILS</a></td>
             </tr>
         <% }); %>
     </tbody>
