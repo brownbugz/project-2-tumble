@@ -24,7 +24,7 @@ function appendFromNewEntry(req, res, next) {
 }
 
 // function appendFromNewEntry(req, res, next) {
-//   var entry = new Entry(req.body);
+    //   var entry = new Entry(req.body);
 //     Entry.findById(req.params.id, function(err, entry) {
 //         entry.push(req.body.entryId);
 //         entry.save(function(err) {
@@ -32,15 +32,6 @@ function appendFromNewEntry(req, res, next) {
 //         });
 //     });
 // }
-
-function showEntry(req, res) {
-    Entry.find({}, function(err, entries) {
-        res.render('tumblers/past-entry', {
-            name,
-            entries
-        });
-    });
-}
 
 function deleteEntry(req, res, next) {
     Entry.findOne({'entry._id': req.params.id}, function(err, entry) {

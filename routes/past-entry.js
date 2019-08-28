@@ -3,7 +3,7 @@ var router = express.Router();
 var pastEntryController = require('../controllers/past-entry');
 
 /* POST new entry of person dated */
-router.get('/', pastEntryController.pastEntry);
-router.post('/:id', pastEntryController.appendFromNewEntry);
+router.get('/:id', pastEntryController.pastEntry);
+router.post('/', pastEntryController.appendFromNewEntry);
 
 module.exports = router;

@@ -1,5 +1,4 @@
 var User = require('../models/user');
-var Entry = require('../models/entry');
 
 module.exports = {
     userPage
@@ -14,13 +13,4 @@ function userPage(req, res) {
             
         })
     });
-}
-
-function list(req, res) {
-    Entry.findById({}, function(err, entries) {
-        res.render('tumblers/past-entry', {
-            name,
-            entries
-        });
-    })
 }
