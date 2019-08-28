@@ -17,6 +17,7 @@ var usersRouter = require('./routes/users');
 var usersHomePageRouter = require('./routes/users-homepage');
 var newEntryRouter = require('./routes/new-entry');
 var pastEntryRouter = require('./routes/past-entry');
+var showEntryRouter = require('./routes/show-entry');
 
 
 var app = express();
@@ -46,6 +47,8 @@ app.use('/users', usersRouter);
 app.use('/users-homepage', usersHomePageRouter);
 app.use('/new-entry', newEntryRouter);
 app.use('/past-entry', pastEntryRouter);
+app.use('/show-entry', showEntryRouter);
+
 
 
 

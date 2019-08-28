@@ -1,32 +1,45 @@
-<!--This is the page for past date entries or where date entries get pushed in
-
+<!--This is the home page while logged in-->
 <%- include('../partials/header') %>
 
-<div>
-    <nav>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+  </head>
+  <body>
+    
+    
+    <div>
+      <nav>
         <h2 class="title"><%= title %></h2>
         <a class="logout" href="/logout"><h2>Log Out</h2></a>
-    </nav>
-</div>
+      </nav>
+    </div>
 
-<table id="list">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Age</th>
-            <th>Profession</th>
-        </tr>
-    </thead>
-    <tbody>
-        <% entry.forEach(function(e) { %>
-            <tr>
-              <td><%= entry.name %></td>
-              <td><%= entry.age %></td>
-              <td><a href="//<%= entry._id %>">DETAILS</a></td>
-            </tr>
-        <% }); %>
-    </tbody>
-</table>
+    <br>
+    <br>
 
+  <form action="/new-entry">
+    <button type="submit" value="New Entry">New Entry</button>
+  </form>
+  <br>
 
-<%- include('../partials/footer') %>> -->
+  <table id="list">
+      <thead>
+          <tr>
+              <th>Name</th>
+          </tr>
+      </thead>
+      <tbody>
+          <% entries.forEach(function(entry) { %>
+              <tr>
+                <td><%= entry.name %></td>
+                <td><a href="/past-entry/<%= entry._id %>">DETAILS</a></td>
+              </tr>
+          <% }); %>
+      </tbody>
+  </table> 
+   
+
+    <%- include('../partials/footer') %>

@@ -1,4 +1,6 @@
 var User = require('../models/user');
+var Entry = require('../models/entry');
+
 
 module.exports = {
     index
@@ -10,6 +12,7 @@ function index(req, res) {
             title: 'Tumble',
             users,
             user: req.user, 
-        })
+        });
     });
 }
+
