@@ -1,0 +1,28 @@
+<%- include('../partials/header') %>
+
+<div>
+    <nav>
+        <a class="home" href="/"><h4>Home</h4></a>
+        <h4 class="title"><%= title %></h4>
+        <a class="logout" href="/logout"><h4>Log Out</h4></a>
+    </nav>
+</div>
+
+<section id="show-page">
+        <div>Name: </div>
+        <div><%= entry.name %></div>
+        <div>Age: </div>
+        <div><%= entry.age %></div>
+        <div>Profession: </div>
+        <div><%= entry.profession %></div>
+        <div>Zodiac: </div>
+        <div><%= entry.zodiac %></div>
+        <div>Review: </div>
+        <div><%= entry.review %></div>
+        <div>Rating: </div>
+        <div><%= entry.rating %></div>
+        <div>Date Again?</div>
+        <div><%= entry.repeatDate %></div>
+      </section>
+
+<%- include('../partials/footer') %>
