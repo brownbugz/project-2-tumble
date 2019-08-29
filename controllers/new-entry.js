@@ -6,7 +6,9 @@ module.exports = {
 }
 
 function newEntry(req, res) {
-    res.render('tumblers/new-entry', { title: "Tumble"});
+    res.render('tumblers/new-entry', { 
+        title: "Tumble"
+    });
 }
 
 function createEntry(req,res) {

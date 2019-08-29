@@ -3,6 +3,8 @@ var Schema = mongoose.Schema;
 
 var reviewSchema = new Schema({
   user: Schema.Types.ObjectId,
+  date: Date,
+  location: String,
   content: String,
   rating: {
     type: Number,

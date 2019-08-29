@@ -4,15 +4,13 @@ var Entry = require('../models/entry');
 module.exports = {
     pastEntry,
     appendFromNewEntry,
-    deleteEntry
+    deleteEntry,
+    editEntry
 }
 
 function pastEntry(req, res) {
-    Entry.findById(req.params.id, function(err, entry) {
-        res.render('tumblers/past-entry', { 
-            title: "Tumble",
-            entry
-        });
+    Entry.find({}, function(err, entries) {
+        res.render('tumblers/past-entry', { title: "Tumble", entries });
     });
 }
 
@@ -23,23 +21,17 @@ function appendFromNewEntry(req, res, next) {
     });
 }
 
-// function appendFromNewEntry(req, res, next) {
-    //   var entry = new Entry(req.body);
-//     Entry.findById(req.params.id, function(err, entry) {
-//         entry.push(req.body.entryId);
-//         entry.save(function(err) {
-//             res.redirect(`/past-entry/${entry._id}`)
-//         });
-//     });
-// }
-
 function deleteEntry(req, res, next) {
     Entry.findOne({'entry._id': req.params.id}, function(err, entry) {
-      entry.id(req.params.id).remove();
+      entry._id(req.params.id).remove();
       entry.save(function(err) {
-        res.redirect('/users-homepage');
+        res.redirect('/past-entry');
       });
     });
+  }
+
+  function editEntry(req, res) {
+
   }
 
 

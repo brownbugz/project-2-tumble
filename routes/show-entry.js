@@ -1,8 +1,8 @@
-var express = require('express');
-var router = express.Router();
-var showEntryController = require('../controllers/show-entry');
+// var express = require('express');
+// var router = express.Router();
+// var showEntryController = require('../controllers/show-entry');
 
-//path
-router.get('/tumblers/:id', showEntryController.showEntry);
+// //path
+// router.get('/:id', showEntryController.showEntry);
 
-module.exports = router;
+// module.exports = router;

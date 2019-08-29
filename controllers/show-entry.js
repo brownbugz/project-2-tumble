@@ -5,10 +5,8 @@ module.exports = {
 }
 
 function showEntry(req, res) {
-    Entry.find({}, function(err, entries) {
-        res.render('tumblers/past-entry', {
-            name,
-            entries
-        });
+    Entry.findById(req.params.id, function(err, entry) {
+        if (err) console.log(err);
+        res.render('tumblers/show-entry', {title: 'Tumble', entry});
     });
 }
