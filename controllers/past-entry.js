@@ -15,6 +15,8 @@ function pastEntry(req, res) {
 }
 
 function appendFromNewEntry(req, res, next) {
+    console.log('APPENDFROMNEWENT')
+    console.log(req.body);
     var entry = new Entry(req.body);
         entry.save(function(err, entry) {
             res.redirect(`/past-entry/${entry.id}`);    
@@ -24,7 +26,6 @@ function appendFromNewEntry(req, res, next) {
 function deleteEntry(req, res, next) {
     Entry.findByIdAndDelete(req.params.id, function(err, entry) {
         console.log(entry);
-        // res.redirect('/past-entry');
         next();
     });
   }

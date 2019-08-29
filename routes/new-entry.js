@@ -4,6 +4,6 @@ var newEntryController = require('../controllers/new-entry');
 
 /* POST new entry of person dated */
 router.get('/', newEntryController.newEntry);
-router.post('/', newEntryController.createEntry);
+router.post('/create', newEntryController.createEntry);
 
 module.exports = router;

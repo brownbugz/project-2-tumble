@@ -12,7 +12,10 @@ function newEntry(req, res) {
 }
 
 function createEntry(req,res) {
+    console.log(req.body);
+    console.log('hello');
     var entry = new Entry(req.body);
+
     console.log(entry);
     entry.save(function(err) {
     if (err) {

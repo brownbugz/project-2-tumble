@@ -3,7 +3,7 @@
 <%- include('../partials/header') %>
 <div>
     <nav>
-        <a class="home" href="/"><h4>Home</h4></a>
+        <a class="home" href="/users-homepage"><h4>Home</h4></a>
         <h4 class="title"><%= title %></h4>
         <a class="logout" href="/logout"><h4>Log Out</h4></a>
     </nav>
@@ -43,28 +43,17 @@
             <option value="Sagittarius">Sagittarius</option>
             <option value="Capricorn">Capricorn</option>
         </select>
-    <br>
-    <br>
-    <label class="review">Review: </label>
-    <textarea class="review" action="/reviews" name="content">
-    </textarea> 
-    <br>
-    <br>
-    <label class="rating">Rating:</label>
-    <select class="rating" name="rating">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-    </select>
-    <br>
-    <br>
-    <label class="repeatDate">Date Again?: </label>
-    <input class="repeatDate" type="checkbox" name="repeatDate" value="true" checked>
-    <br>
-    <br>
-    <input type="submit" value="Add Entry"></input>
+        <br>
+        <br>
+        <label class="repeatDate">Date Again?: </label>
+        <input class="repeatDate" type="checkbox" name="repeatDate" value="true" checked>
+        <br>
+        <br>
+        <input type="submit" value="Add Entry"></input>
+    </form>
+
+
+
 
 </form>
 
