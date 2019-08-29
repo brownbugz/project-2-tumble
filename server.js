@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var methodOverride = require('method-override');
 var session = require('express-session');
 var passport = require('passport');
 
@@ -17,7 +18,6 @@ var usersRouter = require('./routes/users');
 var usersHomePageRouter = require('./routes/users-homepage');
 var newEntryRouter = require('./routes/new-entry');
 var pastEntryRouter = require('./routes/past-entry');
-// var showEntryRouter = require('./routes/show-entry');
 
 
 var app = express();
@@ -30,6 +30,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(methodOverride('_method'));
 app.use(session({
   secret: 'toDateOrNotToDate',
   resave: false,

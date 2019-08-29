@@ -5,7 +5,7 @@ module.exports = {
     pastEntry,
     appendFromNewEntry,
     deleteEntry,
-    editEntry
+    showEntry
 }
 
 function pastEntry(req, res) {
@@ -22,17 +22,20 @@ function appendFromNewEntry(req, res, next) {
 }
 
 function deleteEntry(req, res, next) {
-    Entry.findOne({'entry._id': req.params.id}, function(err, entry) {
-      entry._id(req.params.id).remove();
-      entry.save(function(err) {
-        res.redirect('/past-entry');
-      });
+    Entry.findByIdAndDelete(req.params.id, function(err, entry) {
+        console.log(entry);
+        // res.redirect('/past-entry');
+        next();
     });
   }
 
-  function editEntry(req, res) {
+  function showEntry(req, res) {
+    Entry.findById(req.params.id, function(err, entry) {
+        if (err) console.log(err);
+        res.render('tumblers/show-entry', {title: 'Tumble', entry});
+    });
+}
 
-  }
 
 
 

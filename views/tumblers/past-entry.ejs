@@ -35,7 +35,10 @@
       <tbody>
           <% entries.forEach(function(entry) { %>
               <tr>
-                <td><button type="submit" class="delBtn" action="/past-entry/<%= entry._id %>?_method=DELETE" method="POST">X</button></td>
+                <td>
+                  <form class="deleteBtn" action="/past-entry/<%= entry._id %>?_method=DELETE" method="POST">
+                  <button type="submit" class="delBtn">X</button></td>
+                  </form>
                 <td><%= entry.name %></td>
                 <td><a href="/past-entry/<%= entry._id %>">DETAILS</a></td>
               </tr>
