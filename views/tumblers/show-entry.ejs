@@ -32,7 +32,8 @@
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
-            </select>
+        </select>
+        
         <input type="submit" value="Add Review"></input>
     </form>
 
@@ -43,10 +44,12 @@
             <% entry.reviews.forEach(function(r) { %>
               <% total += r.rating %>
               <tr>
-                <td>Date: <%= r.date %></td>
-                <td>Location: <%= r.location %></td>
-                <td>Review: <%= r.content %></td>
-                <td>Rating: <%= r.rating %></td>
+                <td>
+                Date: <%= r.date %><br>
+                Location: <%= r.location %><br>
+                Review: <%= r.content %><br>
+                Rating: <%= r.rating %><br><br>
+                </td>
               </tr>
             <% }); %>
           </tbody>

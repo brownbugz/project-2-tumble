@@ -2,7 +2,7 @@ var Review = require('../models/review');
 var Entry = require('../models/entry');
 
 module.exports = {
-    createReview
+    createReview,
 };
 
 function createReview(req, res) {
@@ -14,3 +14,4 @@ function createReview(req, res) {
         });
     });
 }
+

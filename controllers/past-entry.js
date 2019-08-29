@@ -1,11 +1,13 @@
 var Entry = require('../models/entry');
+var Review = require('../models/review');
 
 
 module.exports = {
     pastEntry,
     appendFromNewEntry,
     deleteEntry,
-    showEntry
+    showEntry,
+    // editReview,
 }
 
 function pastEntry(req, res) {
@@ -36,6 +38,19 @@ function deleteEntry(req, res, next) {
         res.render('tumblers/show-entry', {title: 'Tumble', entry});
     });
 }
+
+// function editReview(req,res) {
+//     console.log('I am editing reviews');
+//     Review.findById(req.params.id, function(err, review) {
+//         if (err) res.send(err);
+//         review.content(req.body.content);
+//         review.save(function(err) {
+//             res.redirect('/past-entry');
+//         })
+//     })
+// }
+
+
 
 
 
