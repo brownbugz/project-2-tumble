@@ -5,8 +5,13 @@ var pastEntryController = require('../controllers/past-entry');
 /* POST new entry of person dated */
 router.get('/', pastEntryController.pastEntry); //show all
 router.post('/', pastEntryController.appendFromNewEntry);
-router.delete('/:id', pastEntryController.deleteEntry, pastEntryController.pastEntry);
+router.delete('/:id', isLoggedIn, pastEntryController.deleteEntry, pastEntryController.pastEntry);
 
 router.get('/:id', pastEntryController.showEntry); //show one
+
+ function isLoggedIn(req, res, next) {
+    if ( req.isAuthenticated() ) return next();
+    res.redirect('/auth/google');
+  }
 
 module.exports = router;
