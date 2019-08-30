@@ -47,8 +47,11 @@ function editReview(req,res) {
 
 function updateReview(req, res) {
     console.log('I am updating a review');
-
+    Entry.reviews.findByIdAndUpdate(req.params.id, req.body, {new: true}).then(function(review) {
+        res.redirect('/');
+    });
 }
+
 
 
 
