@@ -19,6 +19,7 @@ function appendFromNewEntry(req, res, next) {
     console.log('APPENDFROMNEWENT')
     console.log(req.body);
     var entry = new Entry(req.body);
+    entry.user = req.user._id;
         entry.save(function(err, entry) {
             res.redirect(`/past-entry/${entry.id}`);    
     });

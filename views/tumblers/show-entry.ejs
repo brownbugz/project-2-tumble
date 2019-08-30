@@ -15,7 +15,7 @@
     <div>Zodiac Sign: <%= entry.zodiac %></div>
 
     <label class="review">Review: </label>
-    <form class="review" method="POST" action="/past-entry/<%= entry._id %>/reviews">
+    <form class="review" method="POST" action="/reviews/<%= entry._id %>/reviews">
         <label class="date">Date: </label>
             <input type="date" class="meetup-date" name="date">
         <label class="location">Location: </label>
@@ -51,6 +51,7 @@
                 Location: <%= r.location %><br>
                 Review: <%= r.content %><br>
                 Rating: <%= r.rating %><br><br>
+                Total Rating: <%= total %><br><br>
                 <form class="edit-review" method="GET" action="/reviews/<%= r.id %>/edit">
                   <input type="submit" value="Edit Reviews">   
               </form>           

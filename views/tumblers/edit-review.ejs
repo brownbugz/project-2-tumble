@@ -1,5 +1,21 @@
 <%- include('../partials/header') %>
-<label class="review">Review: </label>
+
+<table>
+    <tbody>
+        <label class="review">Review: </label>
+        <br>
+        <br>
+        <% if (entry.reviews.length) { %>
+        <% entry.reviews.forEach(function(r) { %>
+            <tr>
+              <td>
+                <form class="edit-review" action="/reviews/<%= reviews._id %>?_method=PUT" method="POST">
+                Review: <%= r.content %><br>
+                </form>
+                </td>
+            </tr>
+        <% }); %>
+
 
 
 <input type="submit" value="Add Review"></input>

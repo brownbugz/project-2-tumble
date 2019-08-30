@@ -18,6 +18,7 @@ function createEntry(req,res) {
     console.log(req.body);
     console.log('hello');
     var entry = new Entry(req.body);
+    entry.user = req.user._id;
     console.log(entry);
     entry.save(function(err) {
     if (err) {

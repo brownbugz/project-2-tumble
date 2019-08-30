@@ -2,7 +2,6 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var reviewSchema = new Schema({
-  user: Schema.Types.ObjectId,
   date: String,
   location: String,
   content: String,
@@ -18,7 +17,10 @@ var reviewSchema = new Schema({
 
 
 var entrySchema = new Schema({
-  user: Schema.Types.ObjectId,
+  user: {
+    type: Schema.Types.ObjectId,
+    ref: 'User'
+  },
   name: {
     type: String,
     required: true

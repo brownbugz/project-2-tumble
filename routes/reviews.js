@@ -3,11 +3,10 @@ var router = express.Router();
 var reviewsController = require('../controllers/reviews');
 
 //path
-router.post('/past-entry/:id/reviews', reviewsController.createReview);
+router.post('/:id/reviews', reviewsController.createReview);
 
 router.get('/:id/edit', reviewsController.editReview);
-
-// router.post('/past-entry/:id/reviews', reviewsController.editReview);
+router.put('/reviews/:id', reviewsController.editReview);
 
 function isLoggedIn(req, res, next) {
     if ( req.isAuthenticated() ) return next();

@@ -19,13 +19,28 @@ function createReview(req, res) {
 // once review id is acquired, then it can be edited and reposted
 // not succeeding yet; not sure if this code is correct
 function editReview(req,res) {
+    // allen wrote this - it's okay :)
     console.log('I am editing reviews');
-    Entry.findById(req.params.id, function(err, entry) {
-        entry.reviews.edit(req.params.id, function(err, review) {
-            if (err) res.send(err);
-            entry.reviews.content(req.body.content);
-        })
+    // saving ID params to variable
+    let reviewId = req.params.id;
+    // finding all entries based on user ID
+    Entry.find({user: req.user._id}, function(err, entries) {
         if (err) res.send(err);
-        res.render('tumblers/edit-review');
-    })
+        // creating a variable to later set to the review once we find it 
+        let foundReview;
+        // iterate through all entries, then iterate through all reviews
+        // finding the review with the id equal to the ID we sent in params
+        // when we find it, we set its value to foundReview
+        entries.forEach(entry => {
+            console.log(entry.reviews);
+            let findReview = entry.reviews.find(review => review._id.toString() === reviewId);
+            if (findReview) foundReview = findReview;
+        })
+        res.render('tumblers/edit-review', {
+            review: foundReview,
+            title: 'Edit Review',
+            user: req.user
+        })
+    });
 }
+
