@@ -1,10 +1,16 @@
 <%- include('../partials/header') %>
 
+<div>
+    <nav>
+        <a class="home" href="/users-homepage"><h4>Home</h4></a>
+        <h4 class="title"><%= title %></h4>
+        <a class="logout" href="/logout"><h4>Log Out</h4></a>
+    </nav>
+</div>
+
+
 <table>
     <tbody>
-        <label class="review">Review: </label>
-        <br>
-        <br>
         <% if (review) { %>
         <% console.log('this shows up'); } %>
         <tr>
@@ -13,7 +19,7 @@
                     Review: <textarea placeholder="<%= review.content %>"></textarea>
                     <br>
                     <br>
-                    <input type="submit" value="Edit Review" action="/past-entry/:id"></input>
+                    <input type="submit" value="Edit Review" action="/past-entry"></input>
                 </form>
             </td>
         </tr>

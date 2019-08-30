@@ -1,5 +1,4 @@
 var Entry = require('../models/entry');
-var Review = require('../models/review');
 
 
 module.exports = {

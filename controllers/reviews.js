@@ -3,6 +3,7 @@ var Entry = require('../models/entry');
 module.exports = {
     createReview,
     editReview,
+    updateReview,
 };
 
 function createReview(req, res) {
@@ -43,4 +44,11 @@ function editReview(req,res) {
         })
     });
 }
+
+function updateReview(req, res) {
+    console.log('I am updating a review');
+
+}
+
+
 

@@ -13,7 +13,7 @@ function newEntry(req, res) {
 
 
 //this is actually not functioning - but check inside controllers/past-entry.js -- 
-//the appendFromNewEntry is the creating the entry
+//the appendFromNewEntry is creating the entry
 function createEntry(req,res) {
     console.log(req.body);
     console.log('hello');
