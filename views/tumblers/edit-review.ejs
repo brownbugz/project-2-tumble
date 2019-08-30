@@ -5,19 +5,20 @@
         <label class="review">Review: </label>
         <br>
         <br>
-        <% if (entry.reviews.length) { %>
-        <% entry.reviews.forEach(function(r) { %>
-            <tr>
-              <td>
-                <form class="edit-review" action="/reviews/<%= reviews._id %>?_method=PUT" method="POST">
-                Review: <%= r.content %><br>
+        <% if (review) { %>
+        <% console.log('this shows up'); } %>
+        <tr>
+            <td>
+                <form class="edit-review" action="/reviews/<%= review._id %>?_method=PUT" method="POST">
+                    Review: <textarea placeholder="<%= review.content %>"></textarea>
+                    <br>
+                    <br>
+                    <input type="submit" value="Edit Review" action="/past-entry/:id"></input>
                 </form>
-                </td>
-            </tr>
-        <% }); %>
-
-
-
-<input type="submit" value="Add Review"></input>
+            </td>
+        </tr>
+    </tbody>
+</table>   
+    
 
 <%- include('../partials/footer') %>
