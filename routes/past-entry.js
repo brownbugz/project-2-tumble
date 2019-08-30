@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var pastEntryController = require('../controllers/past-entry');
 
-/* POST new entry of person dated */
+/* List of entries */
 router.get('/', pastEntryController.pastEntry); //show all
 router.post('/', pastEntryController.appendFromNewEntry);
 router.delete('/:id', isLoggedIn, pastEntryController.deleteEntry, pastEntryController.pastEntry);

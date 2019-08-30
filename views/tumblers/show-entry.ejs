@@ -36,9 +36,8 @@
         
         <input type="submit" value="Add Review"></input>
     </form>
-    <!-- <form class="edit-review" method="POST" action="/past-entry/<%= entry._id %>?_method=PUT/reviews">
-        <button type="submit" value="Edit Review"></button>    
-    </form> --> 
+<br>
+<br>
 
     <% if (entry.reviews.length) { %>
         <table>
@@ -52,6 +51,9 @@
                 Location: <%= r.location %><br>
                 Review: <%= r.content %><br>
                 Rating: <%= r.rating %><br><br>
+                <form class="edit-review" method="GET" action="/reviews/<%= r.id %>/edit">
+                  <input type="submit" value="Edit Reviews">   
+              </form>           
                 </td>
               </tr>
             <% }); %>

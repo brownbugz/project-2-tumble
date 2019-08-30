@@ -5,7 +5,13 @@ var reviewsController = require('../controllers/reviews');
 //path
 router.post('/past-entry/:id/reviews', reviewsController.createReview);
 
-// router.put('/past-entry/:id/edit', reviewsController.editReview);
+router.get('/:id/edit', reviewsController.editReview);
+
 // router.post('/past-entry/:id/reviews', reviewsController.editReview);
+
+function isLoggedIn(req, res, next) {
+    if ( req.isAuthenticated() ) return next();
+    res.redirect('/auth/google');
+  }
 
 module.exports = router;

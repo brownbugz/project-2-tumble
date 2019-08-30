@@ -49,7 +49,7 @@ app.use('/users', usersRouter);
 app.use('/users-homepage', usersHomePageRouter);
 app.use('/new-entry', newEntryRouter);
 app.use('/past-entry', pastEntryRouter);
-app.use('/', reviewsRouter);
+app.use('/reviews', reviewsRouter);
 
 
 
