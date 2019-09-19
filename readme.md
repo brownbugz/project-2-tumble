@@ -4,7 +4,7 @@
 
 ## Description
 
-Tumble is a dating tracker type of diary for personal use.
+Tumble is a dating tracker type of diary - comparable to a black diary - for personal use.
 
 ---
 
@@ -23,6 +23,8 @@ Tumble is a dating tracker type of diary for personal use.
 ---
 
 ## Getting Started
+
+[Tumble](https://sei-project2-tumble.herokuapp.com)
 
 * User logs in
 * User enters date's name and info

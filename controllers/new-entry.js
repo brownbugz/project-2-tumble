@@ -12,23 +12,5 @@ function newEntry(req, res) {
 }
 
 
-//this is actually not functioning - but check inside controllers/past-entry.js -- 
-//the appendFromNewEntry is creating the entry
-function createEntry(req,res) {
-    console.log(req.body);
-    console.log('hello');
-    var entry = new Entry(req.body);
-    entry.user = req.user._id;
-    console.log(entry);
-    entry.save(function(err) {
-    if (err) {
-        console.log(err);
-        return res.redirect('/users-homepage');
-    }
-    console.log(entry);
-    res.redirect(`/users-homepage`);
-    });
-}
-
 
 
